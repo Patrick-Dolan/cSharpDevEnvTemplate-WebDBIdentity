@@ -37,7 +37,7 @@ Example of complete appsettings.json:
 }
 
 ```
-* format
+* CONTINUE WITH PROJECT SPECIFIC INSTRUCTIONS FROM HERE!
 
 ### Test Setup/Installation
 
