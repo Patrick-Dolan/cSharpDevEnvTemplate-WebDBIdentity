@@ -12,7 +12,7 @@ namespace ProjectName
     {
       var builder = new ConfigurationBuilder()
           .SetBasePath(env.ContentRootPath)
-          .AddEnvironmentVariables();
+          .AddJsonFile("appsettings.json");
       Configuration = builder.Build();
     }
 
