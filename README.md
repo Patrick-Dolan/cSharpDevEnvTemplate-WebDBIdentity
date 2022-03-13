@@ -9,6 +9,7 @@
 * C#
 * .NET 5.0
 * dotnet
+* MySql/Workbench
 
 ## Description
 
@@ -16,6 +17,9 @@
 
 ## Setup/Installation Requirements
 
+* Make sure you have MySql Workbench installed on your computer.
+* Make sure to have dotnet-ef installed too.<br>
+<em>This project uses <code>dotnet-ef --version 3.0.0</code> which I have globally installed but you can install it however you want. 
 * Download repo to your computer using either clone or the download link.
 * Open the project in VScode or your terminal/IDE of choice.
 * Create a <code>appsettings.json</code> file in the root directory of the project folder. And add the following code replacing anything in square brackets with the information it represents specific to the project database:
@@ -54,6 +58,8 @@ Example: <code>.AddDbContext<ProjectNameContext\></code> changed to <code>.AddDb
 * In ProjectNameContext.cs model the DbSet type and name should be renamed to what the table in the database represents.
 * <strong>Make sure to rename ProjectName & ClassName in ProjectName.Tests to match those in the ProjectName directory tree.</strong>  
 * Rename the ProjectName in the following files for use: ProjectName in all folder its included in, Homecontroller.cs, ClassName.cs, PageName.cshtml, Program.cs,ProjectNameContext.cs, and Startup.cs.
+* Once everything is renamed and can build navigate into the production folder <code>ProjectName/ProjectName/</code> and run the following command to make the initial migrations directory: <br>
+<code>dotnet ef migrations add Initial</code>
 
 <br>
 * When renaming project files for new project make sure to rename all fields with "ProjectName" as the directory/file name. This includes line 13 of "ProjectName.Tests.csproj" to the names of your directories. 
