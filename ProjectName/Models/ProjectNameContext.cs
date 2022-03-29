@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ProjectName.Models
 {
-  public class ProjectNameContext : DbContext
+  public class ProjectNameContext : IdentityDbContext<ApplicationUser>
   {
     public DbSet<DatabaseTablePlaceholder> DatabaseTablePlaceholder { get; set; }
     public ProjectNameContext(DbContextOptions options) : base(options) { }
